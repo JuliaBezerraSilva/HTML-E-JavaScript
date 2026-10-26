@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: cornflowerblue;
+    color: white;
+    padding: 30px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+main > p {
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.escolha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 35px 10px;
+    margin-top: 25px;
+    border: 2px solid blueviolet;
+    border-radius: 18px;
+}
+
+.cofre {
+    padding: 15px 22px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    background: hotpink;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cofre:hover:not(:disabled) {
+    background: darkcyan;
+    transform: scale(1.08);
+}
+
+.cofre:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.cofre.premiado {
+    background: #198754;
+    border-color: #b7ffd1;
+}
+
+.cofre.vazio {
+    background: #dc3545;
+    border-color: #ffc1c7;
+}
+
+#mensagem {
+    min-height: 35px;
+    margin-top: 25px;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#jogar-novamente {
+    padding: 14px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rebeccapurple;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#jogar-novamente:hover {
+    background: darkslateblue;
+    transform: scale(1.05);
+}
+
+button:focus-visible {
+    outline: 3px solid yellow;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .escolha {
+        gap: 12px;
+    }
+
+    .cofre {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .placar {
+        gap: 10px 20px;
+        font-size: 18px;
+    }
+}
